@@ -6,12 +6,13 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		Intro();
 		Board bigBoard = new Board();
 		int bigBoardChoice = 0;
 		int littleBoardChoice=0;
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Player one please input the Bigboard number followed by the littelboard number you want to play at");
+		System.out.println("Player one please input the Bigboard number followed by the littleboard number you want to play at");
 		System.out.println("Big Board Number:");
 		while(!scan.hasNextInt()){
 		scan.nextLine();
@@ -133,6 +134,34 @@ public class Main {
 			}	
 			return false;
 		}
+		
+		public static void Intro(){
+		System.out.println("=====================================");
+		System.out.println("       ULTIMATE TIC TAC TOE");
+		System.out.println("=====================================");
+		System.out.println("=====================================");
+		System.out.println("  Welcome to ULTIMATE TIC TAC TOE");
+		System.out.println("=====================================\n");
+		System.out.println("================RULES================");
+		System.out.println("Player 1 is represented by X and \nPlayer 2 is represented by O");
+		System.out.println("At the start of the game player 1 chooses a Big Box to play in");
+		System.out.println("These are numbered 0-8, \nwith 0 being the far top left \nand 8 being the far bottom right");
+		System.out.println("Then the player selects a small tic tac toe square to play in that big box");
+		System.out.println("These are also numbered 0-8 \nwith 0 being the far top left \nand 8 being the far bottom right");
+		System.out.println("The next player has to play in the big box that correlates \nwith the little box the previous player played in");
+		System.out.println("For example: \nIf Player One plays in Big Box 4 and Little Box 3, \nPlayer Two will have to play in Big Box three next turn");
+		System.out.println("Then if Player Two plays in Little Box 5, \nPlayer One will have to play in Big Box 5.");
+		System.out.println("If a player gets a regular tic tac toe in a little box \nhe wins that big box");
+		System.out.println("If a player wins three big boxes he wins the game");
+		System.out.println("There are some other rules however...");
+		System.out.println("If a player has to play in a big box that has already been won \nor resulted in a draw, \nthen that player must select a new big box to play in");
+		System.out.println("Thats all!");
+		System.out.println("Enjoy!");
+		System.out.println("=====================================\n\n\n\n\n");
+		
+		
+		}
+		
 		
 }
 		
