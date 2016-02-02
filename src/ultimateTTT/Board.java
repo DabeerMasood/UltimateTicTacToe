@@ -14,5 +14,5 @@ public class Board {
 		return this.bigBoard.get(bigBoard).writeMove(move, littleBoard);
 	}
 	
-	
+	public 
 }
