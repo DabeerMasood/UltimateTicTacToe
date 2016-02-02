@@ -1,6 +1,8 @@
 package ultimateTTT;
 import java.util.Scanner;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -9,8 +11,6 @@ public class Main {
 		int littleBoardChoice=0;
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
-		
-		
 		System.out.println("Player one please input the Bigboard number followed by the littelboard number you want to play at");
 		System.out.println("Big Board Number:");
 		bigBoardChoice = scan.nextInt();
@@ -20,8 +20,7 @@ public class Main {
 		bigBoard.writeGuess(current,bigBoardChoice,littleBoardChoice);
 		int nextBoard= littleBoardChoice;
 		int turn =2;
-		
-		
+
 		while(bigBoard.checkWin(current)==false){
 			
 				
@@ -51,6 +50,10 @@ public class Main {
 			
 			
 		}
+		
+		
+	
+
 }
 		
 	
