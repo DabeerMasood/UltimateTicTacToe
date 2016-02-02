@@ -77,8 +77,10 @@ public class InnerBoard {
 		for (int i=2*row; i<(2*row+3); i++){
 			if (boardArray.get(i)==Move.X){
 				System.out.print('X');
+
 			} else if(boardArray.get(i)==Move.O){
 				System.out.print('O');
+
 			} else{System.out.print('.');}
 		}
 		System.out.print('|');
