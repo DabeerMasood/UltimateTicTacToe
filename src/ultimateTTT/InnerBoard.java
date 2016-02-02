@@ -79,6 +79,13 @@ public class InnerBoard {
 		return this.wonBoard;
 	}
 	
+	public boolean playable(int location){
+		if (this.boardArray.get(location)!=Move.E){
+			return false;
+		}
+		return true;
+	}
+	
 	public void printRow(int row){
 		for (int i=3*row; i<(3*row+3); i++){
 			if (boardArray.get(i)==Move.X){

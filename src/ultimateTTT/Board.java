@@ -71,4 +71,8 @@ public class Board {
 		return !(bigBoard.get(boardNum).returnBoardStatus() || bigBoard.get(boardNum).returnWon());
 	}
 	
+	public boolean playableInnerLocation(int big, int inner){
+		return this.bigBoard.get(big).playable(inner);
+	}
+	
 }
