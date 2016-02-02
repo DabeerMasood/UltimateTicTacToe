@@ -19,17 +19,19 @@ public class Main {
 		Move current = Move.X;
 		bigBoard.writeGuess(current,bigBoardChoice,littleBoardChoice);
 		int nextBoard= littleBoardChoice;
-		int turn =2;
-
+		String turn ="";
 		while(bigBoard.checkWin(current)==false){
 			
 				
 			bigBoard.printBoard();
-			if(turn==2){
-				current = Move.O;
-			}else if(turn==1){
+			if(current.equals(Move.O)){
 				current = Move.X;
+						turn = "X";
+			}else if(current.equals(Move.X)){
+				current = Move.O;
+				turn = "O";
 			}
+			System.out.println("It is now " + turn + "'s turn");
 			if(bigBoardChoice==-1){
 				System.out.println("You may play anywhere else");
 				System.out.println("Pick a new BigBoard spot");
@@ -37,15 +39,24 @@ public class Main {
 				bigBoardChoice = scan.nextInt();
 				}
 				
-			System.out.println("Player you are playing at " + bigBoardChoice);
+			System.out.println("Player you are playing at big board number " + bigBoardChoice);
 			System.out.println("Player input the little board number you want to play at");
 			System.out.println("Little Board Number:");
 			littleBoardChoice=scan.nextInt();
 			bigBoard.writeGuess(current,bigBoardChoice,littleBoardChoice);
+			/*if(bigBoard.returnBoardStatus()){
+			bigBoardChoice=-1;
+			}*/
+			bigBoardChoice = littleBoardChoice;
+			
+			if(bigBoard.checkWin(current)){
+				System.out.println("YOU HAVE WON THE GAME!!");
+				break;
+			}
 			
 		
 			
-			
+			}
 		}
 			
 			
@@ -54,6 +65,6 @@ public class Main {
 		
 	
 
-}
+
 		
 	
