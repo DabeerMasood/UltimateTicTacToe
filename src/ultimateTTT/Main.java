@@ -12,10 +12,22 @@ public class Main {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Player one please input the Bigboard number followed by the littelboard number you want to play at");
-		System.out.println("Big Boa`rd Number:");
+		System.out.println("Big Board Number:");
 		bigBoardChoice = scan.nextInt();
+			while(outOfBounds(bigBoardChoice)){
+			System.out.println("That choice is out of bounds, please pick again");
+			System.out.println("Big Board Number: ");
+			bigBoardChoice = scan.nextInt();
+			}
+			
 		System.out.println("Little Board Number:");
 		littleBoardChoice = scan.nextInt();
+		while(outOfBounds(littleBoardChoice)){
+			System.out.println("That choice is out of bounds, please pick again");
+			System.out.println("Little Board Number: ");
+			littleBoardChoice = scan.nextInt();
+			}
+			
 		Move current = Move.X;
 		bigBoard.writeGuess(current,bigBoardChoice,littleBoardChoice);
 		String turn ="";
@@ -39,12 +51,23 @@ public class Main {
 				System.out.println("Pick a new BigBoard spot");
 				
 				bigBoardChoice = scan.nextInt();
+				while(outOfBounds(bigBoardChoice)){
+					System.out.println("That choice is out of bounds, please pick again");
+					System.out.println("Big Board Number: ");
+					bigBoardChoice = scan.nextInt();
+					}
 			}
 				
 			System.out.println("Player you are playing at big board number " + bigBoardChoice);
 			System.out.println("Player input the little board number you want to play at");
 			System.out.println("Little Board Number:");
 			littleBoardChoice=scan.nextInt();
+			while(outOfBounds(littleBoardChoice)){
+				System.out.println("That choice is out of bounds, please pick again");
+				System.out.println("Little Board Number: ");
+				littleBoardChoice = scan.nextInt();
+				}
+				
 			bigBoard.writeGuess(current,bigBoardChoice,littleBoardChoice);
 
 			/*if(bigBoard.returnBoardStatus()){
@@ -62,6 +85,13 @@ public class Main {
 		}
 			
 			
+		public static  boolean outOfBounds(int choice){
+		if(choice<0 || choice>8){
+			return true;
+		}
+		return false;
+		}
+		
 		}
 		
 		
