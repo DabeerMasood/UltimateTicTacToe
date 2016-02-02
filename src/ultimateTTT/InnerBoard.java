@@ -3,9 +3,6 @@ package ultimateTTT;
 import java.util.ArrayList;
 
 public class InnerBoard {
-	public enum Move{
-		X, O
-	}
 	
 	private ArrayList<Move> boardArray; 
 	private boolean wonBoard;
