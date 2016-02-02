@@ -44,6 +44,8 @@ public class Main {
 			System.out.println("Little Board Number:");
 			littleBoardChoice=scan.nextInt();
 			bigBoard.writeGuess(current,bigBoardChoice,littleBoardChoice);
+			System.out.println("check");
+
 			/*if(bigBoard.returnBoardStatus()){
 			bigBoardChoice=-1;
 			}*/
