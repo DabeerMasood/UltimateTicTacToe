@@ -31,7 +31,7 @@ public class Main {
 		Move current = Move.X;
 		bigBoard.writeGuess(current,bigBoardChoice,littleBoardChoice);
 		String turn ="";
-		while(bigBoard.checkWin(current)==false){
+		while(bigBoard.checkWin()==false){
 			
 			bigBoardChoice = littleBoardChoice;
 			if (bigBoard.checkBoardPlayable(bigBoardChoice)==false){
@@ -84,7 +84,7 @@ public class Main {
 			bigBoardChoice=-1;
 			}*/
 			
-			if(bigBoard.checkWin(current)){
+			if(bigBoard.checkWin()){
 				System.out.println("YOU HAVE WON THE GAME!!");
 				break;
 			}

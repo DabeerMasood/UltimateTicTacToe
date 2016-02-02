@@ -22,29 +22,29 @@ public class Board {
 		return this.bigBoard.get(location).returnWon();
 	}
 
-	public boolean checkWin(Move move){
-		if (this.bigBoard.get((0)).equals(move)&&this.bigBoard.get((1)).equals(move)&&this.bigBoard.get(2).equals(move)){
+	public boolean checkWin(){
+		if (this.bigBoard.get(0).returnWinner()== this.bigBoard.get((1)).returnWinner()&& this.bigBoard.get(1).returnWinner()==this.bigBoard.get(2).returnWinner()){
 			return true;
 		}
-		if (this.bigBoard.get((3)).equals(move)&&this.bigBoard.get((4)).equals(move)&&this.bigBoard.get(5).equals(move)){
+		if (this.bigBoard.get((3)).returnWinner()==this.bigBoard.get((4)).returnWinner()&&this.bigBoard.get(5).returnWinner()==this.bigBoard.get((4)).returnWinner()){
 			return true;
 		}
-		if (this.bigBoard.get((6)).equals(move)&&this.bigBoard.get((7)).equals(move)&&this.bigBoard.get(8).equals(move)){
+		if (this.bigBoard.get((6)).returnWinner()==this.bigBoard.get((7)).returnWinner()&&this.bigBoard.get(8).returnWinner()==this.bigBoard.get((7)).returnWinner()){
 			return true;
 		}
-		if (this.bigBoard.get((0)).equals(move)&&this.bigBoard.get((3)).equals(move)&&this.bigBoard.get(6).equals(move)){
+		if (this.bigBoard.get((0)).returnWinner()==this.bigBoard.get((3)).returnWinner()&&this.bigBoard.get(6).returnWinner()==this.bigBoard.get((3)).returnWinner()){
 			return true;
 		}
-		if (this.bigBoard.get((1)).equals(move)&&this.bigBoard.get((4)).equals(move)&&this.bigBoard.get(7).equals(move)){
+		if (this.bigBoard.get((1)).returnWinner()==this.bigBoard.get((4)).returnWinner()&&this.bigBoard.get(7).returnWinner()==this.bigBoard.get((4)).returnWinner()){
 			return true;
 		}
-		if (this.bigBoard.get((2)).equals(move)&&this.bigBoard.get((5)).equals(move)&&this.bigBoard.get(8).equals(move)){
+		if (this.bigBoard.get((2)).returnWinner()==this.bigBoard.get((5)).returnWinner()&&this.bigBoard.get(8).returnWinner()==this.bigBoard.get((5)).returnWinner()){
 			return true;
 		}
-		if (this.bigBoard.get((0)).equals(move)&&this.bigBoard.get((4)).equals(move)&&this.bigBoard.get(8).equals(move)){
+		if (this.bigBoard.get((0)).returnWinner()==this.bigBoard.get((4)).returnWinner()&&this.bigBoard.get(8).returnWinner()==this.bigBoard.get((4)).returnWinner()){
 			return true;
 		}
-		if (this.bigBoard.get((2)).equals(move)&&this.bigBoard.get((4)).equals(move)&&this.bigBoard.get(6).equals(move)){
+		if (this.bigBoard.get((2)).returnWinner()==this.bigBoard.get((4)).returnWinner()&&this.bigBoard.get(6).returnWinner()==this.bigBoard.get((4)).returnWinner()){
 			return true;
 		}
 		
