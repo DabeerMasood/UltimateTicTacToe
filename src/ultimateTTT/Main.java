@@ -6,13 +6,12 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		
 		Board bigBoard = new Board();
 		int bigBoardChoice = 0;
 		int littleBoardChoice=0;
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Player one please input the Bigboard number followed by the littleboard number you want to play at");
+		System.out.println("Player one please input the Bigboard number followed by the littelboard number you want to play at");
 		System.out.println("Big Board Number:");
 		bigBoardChoice = scan.nextInt();
 			while(outOfBounds(bigBoardChoice)){
@@ -32,7 +31,7 @@ public class Main {
 		Move current = Move.X;
 		bigBoard.writeGuess(current,bigBoardChoice,littleBoardChoice);
 		String turn ="";
-		while(bigBoard.checkWin(current)==false){
+		while(bigBoard.checkWin()==false){
 			
 			bigBoardChoice = littleBoardChoice;
 			if (bigBoard.checkBoardPlayable(bigBoardChoice)==false){
@@ -73,16 +72,10 @@ public class Main {
 			System.out.println("Player input the little board number you want to play at");
 			System.out.println("Little Board Number:");
 			littleBoardChoice=scan.nextInt();
-			while(outOfBounds(littleBoardChoice)|| bigBoard.playableInnerLocation(bigBoardChoice,littleBoardChoice)==false){
-				if(outOfBounds(littleBoardChoice)){
+			while(outOfBounds(littleBoardChoice)){
 				System.out.println("That choice is out of bounds, please pick again");
 				System.out.println("Little Board Number: ");
 				littleBoardChoice = scan.nextInt();
-				}else if (bigBoard.playableInnerLocation(bigBoardChoice,littleBoardChoice)==false){
-				System.out.println("That choice is not open, please pick again");
-				System.out.println("Little Board Number: ");
-				littleBoardChoice=scan.nextInt();
-				}
 			}
 				
 			bigBoard.writeGuess(current,bigBoardChoice,littleBoardChoice);
@@ -90,26 +83,24 @@ public class Main {
 			/*if(bigBoard.returnBoardStatus()){
 			bigBoardChoice=-1;
 			}*/
-			
-			/*if(bigBoard.checkWin(current)){
-				System.out.println("YOU HAVE WON THE GAME!!");
-				break;
-			}
-			*/
+		}
+		bigBoard.printBoard();
+		System.out.println("YOU HAVE WON THE GAME!!");
 		
 			
-			}
-		}
+		
+	}
+
 			
 			
 		public static  boolean outOfBounds(int choice){
-		if(choice<0 || choice>8){
-			return true;
-		}
-		return false;
+			if(choice<0 || choice>8){
+				return true;
+			}	
+			return false;
 		}
 		
-		}
+}
 		
 		
 	
