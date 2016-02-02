@@ -19,7 +19,9 @@ public class InnerBoard {
 	}
 	
 	public boolean writeMove(Move move, int location){
-		if (location<0 || location>8){return false;}
+		if (location<0 || location>8){
+			System.out.println("Little board out of bounds");
+			return false;}
 		if (this.boardArray.get(location) != Move.E){return false;}
 		else{
 			boardArray.set(location, move);

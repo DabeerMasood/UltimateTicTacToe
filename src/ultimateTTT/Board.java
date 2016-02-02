@@ -13,7 +13,9 @@ public class Board {
 	}
 	
 	public boolean writeGuess(Move move, int bigBoard, int littleBoard){
-		if (bigBoard<0 || bigBoard>8){return false;}
+		if (bigBoard<0 || bigBoard>8){
+			System.out.println("Big Board out of bounds");
+			return false;}
 		return this.bigBoard.get(bigBoard).writeMove(move, littleBoard);
 	}
 	
