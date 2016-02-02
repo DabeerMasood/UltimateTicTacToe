@@ -12,7 +12,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Player one please input the Bigboard number followed by the littelboard number you want to play at");
-		System.out.println("Big Board Number:");
+		System.out.println("Big Boa`rd Number:");
 		bigBoardChoice = scan.nextInt();
 		System.out.println("Little Board Number:");
 		littleBoardChoice = scan.nextInt();
