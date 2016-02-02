@@ -24,10 +24,11 @@ public class InnerBoard {
 		else{
 			boardArray.set(location, move);
 			if (checkWin(move)==true){
-				
+				wonBoard=true;
+				this.winner=move;
 			}
 			if (!this.boardArray.contains(null)){//checks to see if little board is full
-				this.winner = move;
+				this.fullBoard=true;
 			}
 			return true;
 		}
@@ -73,7 +74,7 @@ public class InnerBoard {
 	}
 	
 	public void printRow(int row){
-		for (int i=2*row; i<3*row; i++){
+		for (int i=2*row; i<(2*row+3); i++){
 			if (boardArray.get(i)==Move.X){
 				System.out.print('X');
 			} else if(boardArray.get(i)==Move.O){
