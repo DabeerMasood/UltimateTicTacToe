@@ -20,14 +20,14 @@ public class InnerBoard {
 	
 	public boolean writeMove(Move move, int location){
 		if (location<0 || location>8){return false;}
-		if (this.boardArray.get(location) != null){return false;}
+		if (this.boardArray.get(location) != Move.E){return false;}
 		else{
 			boardArray.set(location, move);
 			if (checkWin(move)==true){
 				wonBoard=true;
 				this.winner=move;
 			}
-			if (!this.boardArray.contains(null)){//checks to see if little board is full
+			if (!this.boardArray.contains(Move.E)){//checks to see if little board is full
 				this.fullBoard=true;
 			}
 			return true;
