@@ -10,9 +10,10 @@ public class InnerBoard {
 	private Move winner;
 	
 	public InnerBoard(){
-		this.boardArray= new ArrayList<Move>(9);
+		this.boardArray= new ArrayList<Move>();
+		//System.out.print(this.boardArray.size());
 		for (int i=0; i<9; i++){
-			this.boardArray.set(i, null);
+			this.boardArray.add(null);
 		}
 		this.fullBoard=false;
 	}

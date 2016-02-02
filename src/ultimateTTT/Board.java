@@ -6,7 +6,10 @@ public class Board {
 	private ArrayList<InnerBoard> bigBoard;
 	
 	public Board(){
-		bigBoard = new ArrayList<InnerBoard>(9);
+		this.bigBoard = new ArrayList<InnerBoard>();
+		for (int i=0;i<9;i++){
+			this.bigBoard.add(new InnerBoard());
+		}
 	}
 	
 	public boolean writeGuess(Move move, int bigBoard, int littleBoard){
