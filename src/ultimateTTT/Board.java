@@ -56,8 +56,9 @@ public class Board {
 				lilBoard1.printRow(j);
 				lilBoard2.printRow(j);
 				lilBoard3.printRow(j);
+				System.out.println();
 			}
-			System.out.print("_________");
+			System.out.print("_________\n");
 		}
 		
 	}

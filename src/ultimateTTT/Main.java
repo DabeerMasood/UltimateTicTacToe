@@ -24,7 +24,7 @@ public class Main {
 		while(bigBoard.checkWin(current)==false){
 			
 				
-				
+			bigBoard.printBoard();
 			if(turn==2){
 				current = Move.O;
 			}else if(turn==1){
