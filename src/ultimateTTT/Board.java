@@ -18,7 +18,9 @@ public class Board {
 			return false;}
 		return this.bigBoard.get(bigBoard).writeMove(move, littleBoard);
 	}
-	
+	public boolean beenWon(int location){
+		return this.bigBoard.get(location).returnWon();
+	}
 
 	public boolean checkWin(Move move){
 		if (this.bigBoard.get((0)).equals(move)&&this.bigBoard.get((1)).equals(move)&&this.bigBoard.get(2).equals(move)){

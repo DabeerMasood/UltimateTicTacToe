@@ -51,10 +51,20 @@ public class Main {
 				System.out.println("Pick a new BigBoard spot");
 				
 				bigBoardChoice = scan.nextInt();
-				while(outOfBounds(bigBoardChoice)){
+			}
+				
+				while(outOfBounds(bigBoardChoice) || bigBoard.beenWon(bigBoardChoice)){
+					if(outOfBounds(bigBoardChoice)){
+					
 					System.out.println("That choice is out of bounds, please pick again");
 					System.out.println("Big Board Number: ");
 					bigBoardChoice = scan.nextInt();
+					}else if (bigBoard.beenWon(bigBoardChoice)){
+						System.out.println("This board has already been won");
+						System.out.println("You may play anywhere else");
+						System.out.println("Pick a new BigBoard spot");
+						
+						bigBoardChoice = scan.nextInt();
 					}
 			}
 				
