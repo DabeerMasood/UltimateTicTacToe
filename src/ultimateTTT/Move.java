@@ -1,5 +1,5 @@
 package ultimateTTT;
 
 public enum Move {
-	X, O
+	X, O, E
 }

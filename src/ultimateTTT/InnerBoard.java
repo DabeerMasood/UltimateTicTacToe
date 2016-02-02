@@ -13,7 +13,7 @@ public class InnerBoard {
 		this.boardArray= new ArrayList<Move>();
 		//System.out.print(this.boardArray.size());
 		for (int i=0; i<9; i++){
-			this.boardArray.add(null);
+			this.boardArray.add(Move.E);
 		}
 		this.fullBoard=false;
 	}
