@@ -63,4 +63,8 @@ public class Board {
 		
 	}
 	
+	public boolean checkBoardPlayable(int boardNum){
+		return !(bigBoard.get(boardNum).returnBoardStatus() || bigBoard.get(boardNum).returnWon());
+	}
+	
 }
