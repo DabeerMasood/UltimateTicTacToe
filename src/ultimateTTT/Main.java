@@ -22,7 +22,10 @@ public class Main {
 		String turn ="";
 		while(bigBoard.checkWin(current)==false){
 			
-				
+			bigBoardChoice = littleBoardChoice;
+			if (bigBoard.checkBoardPlayable(bigBoardChoice)==false){
+				bigBoardChoice=-1;
+			}
 			bigBoard.printBoard();
 			if(current.equals(Move.O)){
 				current = Move.X;
@@ -37,7 +40,7 @@ public class Main {
 				System.out.println("Pick a new BigBoard spot");
 				
 				bigBoardChoice = scan.nextInt();
-				}
+			}
 				
 			System.out.println("Player you are playing at big board number " + bigBoardChoice);
 			System.out.println("Player input the little board number you want to play at");
@@ -49,7 +52,6 @@ public class Main {
 			/*if(bigBoard.returnBoardStatus()){
 			bigBoardChoice=-1;
 			}*/
-			bigBoardChoice = littleBoardChoice;
 			
 			if(bigBoard.checkWin(current)){
 				System.out.println("YOU HAVE WON THE GAME!!");

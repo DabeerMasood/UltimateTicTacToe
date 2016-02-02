@@ -73,13 +73,17 @@ public class InnerBoard {
 		return this.winner;
 	}
 	
+	public boolean returnWon(){
+		return this.wonBoard;
+	}
+	
 	public void printRow(int row){
-		for (int i=2*row; i<(2*row+3); i++){
+		for (int i=3*row; i<(3*row+3); i++){
 			if (boardArray.get(i)==Move.X){
 				System.out.print('X');
 			} else if(boardArray.get(i)==Move.O){
 				System.out.print('O');
-			} else{System.out.print('.');}
+			} else if (boardArray.get(i)==Move.E){System.out.print('.');}
 		}
 		System.out.print('|');
 	}
