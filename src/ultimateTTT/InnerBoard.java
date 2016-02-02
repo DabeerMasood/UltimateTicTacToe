@@ -26,14 +26,46 @@ public class InnerBoard {
 		else{
 			boardArray.set(location, move);
 			
-			if (!this.boardArray.contains(null)){
-				this.fullBoard = true;
+			if (!this.boardArray.contains(null)){//checks to see if little board is full
 				this.winner = move;
 			}
 			return true;
 		}
 		
 	}
+	
+	public boolean checkWin(Move move){
+		if (this.boardArray.get((0)).equals(move)&&this.boardArray.get((1)).equals(move)&&this.boardArray.get(2).equals(move)){
+			return true;
+		}
+		if (this.boardArray.get((3)).equals(move)&&this.boardArray.get((4)).equals(move)&&this.boardArray.get(5).equals(move)){
+			return true;
+		}
+		if (this.boardArray.get((6)).equals(move)&&this.boardArray.get((7)).equals(move)&&this.boardArray.get(8).equals(move)){
+			return true;
+		}
+		if (this.boardArray.get((0)).equals(move)&&this.boardArray.get((3)).equals(move)&&this.boardArray.get(6).equals(move)){
+			return true;
+		}
+		if (this.boardArray.get((1)).equals(move)&&this.boardArray.get((4)).equals(move)&&this.boardArray.get(7).equals(move)){
+			return true;
+		}
+		if (this.boardArray.get((2)).equals(move)&&this.boardArray.get((5)).equals(move)&&this.boardArray.get(8).equals(move)){
+			return true;
+		}
+		if (this.boardArray.get((0)).equals(move)&&this.boardArray.get((4)).equals(move)&&this.boardArray.get(8).equals(move)){
+			return true;
+		}
+		if (this.boardArray.get((2)).equals(move)&&this.boardArray.get((4)).equals(move)&&this.boardArray.get(6).equals(move)){
+			return true;
+		}
+		
+		return false;
+		
+		
+	
+	}
+	
 	
 	public boolean returnBoardStatus(){
 		return this.fullBoard;
