@@ -13,18 +13,34 @@ public class Main {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Player one please input the Bigboard number followed by the littelboard number you want to play at");
 		System.out.println("Big Board Number:");
-		bigBoardChoice = scan.nextInt();
+		while(!scan.hasNextInt()){
+		scan.nextLine();
+		System.out.println("This is an invalid input, please enter a number from 0-8");
+		}bigBoardChoice = scan.nextInt();
+		
 			while(outOfBounds(bigBoardChoice)){
 			System.out.println("That choice is out of bounds, please pick again");
 			System.out.println("Big Board Number: ");
+			while(!scan.hasNextInt()){
+				scan.nextLine();
+				System.out.println("This is an invalid input, please enter a number from 0-8");
+				}
 			bigBoardChoice = scan.nextInt();
 			}
 			
 		System.out.println("Little Board Number:");
+		while(!scan.hasNextInt()){
+			scan.nextLine();
+			System.out.println("This is an invalid input, please enter a number from 0-8");
+			}
 		littleBoardChoice = scan.nextInt();
 		while(outOfBounds(littleBoardChoice)){
 			System.out.println("That choice is out of bounds, please pick again");
 			System.out.println("Little Board Number: ");
+			while(!scan.hasNextInt()){
+				scan.nextLine();
+				System.out.println("This is an invalid input, please enter a number from 0-8");
+				}
 			littleBoardChoice = scan.nextInt();
 			}
 			
@@ -49,7 +65,10 @@ public class Main {
 			if(bigBoardChoice==-1){
 				System.out.println("You may play anywhere else");
 				System.out.println("Pick a new BigBoard spot");
-				
+				while(!scan.hasNextInt()){
+					scan.nextLine();
+					System.out.println("This is an invalid input, please enter a number from 0-8");
+					}
 				bigBoardChoice = scan.nextInt();
 			}
 				
@@ -58,12 +77,19 @@ public class Main {
 					
 					System.out.println("That choice is out of bounds, please pick again");
 					System.out.println("Big Board Number: ");
+					while(!scan.hasNextInt()){
+						scan.nextLine();
+						System.out.println("This is an invalid input, please enter a number from 0-8");
+						}
 					bigBoardChoice = scan.nextInt();
 					}else if (bigBoard.beenWon(bigBoardChoice)){
 						System.out.println("This board has already been won");
 						System.out.println("You may play anywhere else");
 						System.out.println("Pick a new BigBoard spot");
-						
+						while(!scan.hasNextInt()){
+							scan.nextLine();
+							System.out.println("This is an invalid input, please enter a number from 0-8");
+							}
 						bigBoardChoice = scan.nextInt();
 					}
 			}
@@ -71,10 +97,18 @@ public class Main {
 			System.out.println("Player you are playing at big board number " + bigBoardChoice);
 			System.out.println("Player input the little board number you want to play at");
 			System.out.println("Little Board Number:");
+			while(!scan.hasNextInt()){
+				scan.nextLine();
+				System.out.println("This is an invalid input, please enter a number from 0-8");
+				}
 			littleBoardChoice=scan.nextInt();
 			while(outOfBounds(littleBoardChoice)){
 				System.out.println("That choice is out of bounds, please pick again");
 				System.out.println("Little Board Number: ");
+				while(!scan.hasNextInt()){
+					scan.nextLine();
+					System.out.println("This is an invalid input, please enter a number from 0-8");
+					}
 				littleBoardChoice = scan.nextInt();
 			}
 				
