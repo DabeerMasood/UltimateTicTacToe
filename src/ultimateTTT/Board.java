@@ -23,28 +23,28 @@ public class Board {
 	}
 
 	public boolean checkWin(){
-		if (this.bigBoard.get(0).returnWinner()== this.bigBoard.get((1)).returnWinner()&& this.bigBoard.get(1).returnWinner()==this.bigBoard.get(2).returnWinner()){
+		if (this.bigBoard.get(0).returnWinner()!=Move.E && this.bigBoard.get(0).returnWinner()== this.bigBoard.get((1)).returnWinner()&& this.bigBoard.get(1).returnWinner()==this.bigBoard.get(2).returnWinner()){
 			return true;
 		}
-		if (this.bigBoard.get((3)).returnWinner()==this.bigBoard.get((4)).returnWinner()&&this.bigBoard.get(5).returnWinner()==this.bigBoard.get((4)).returnWinner()){
+		if (this.bigBoard.get(3).returnWinner()!=Move.E &&this.bigBoard.get((3)).returnWinner()==this.bigBoard.get((4)).returnWinner()&&this.bigBoard.get(5).returnWinner()==this.bigBoard.get((4)).returnWinner()){
 			return true;
 		}
-		if (this.bigBoard.get((6)).returnWinner()==this.bigBoard.get((7)).returnWinner()&&this.bigBoard.get(8).returnWinner()==this.bigBoard.get((7)).returnWinner()){
+		if (this.bigBoard.get(6).returnWinner()!=Move.E &&this.bigBoard.get((6)).returnWinner()==this.bigBoard.get((7)).returnWinner()&&this.bigBoard.get(8).returnWinner()==this.bigBoard.get((7)).returnWinner()){
 			return true;
 		}
-		if (this.bigBoard.get((0)).returnWinner()==this.bigBoard.get((3)).returnWinner()&&this.bigBoard.get(6).returnWinner()==this.bigBoard.get((3)).returnWinner()){
+		if (this.bigBoard.get(0).returnWinner()!=Move.E &&this.bigBoard.get((0)).returnWinner()==this.bigBoard.get((3)).returnWinner()&&this.bigBoard.get(6).returnWinner()==this.bigBoard.get((3)).returnWinner()){
 			return true;
 		}
-		if (this.bigBoard.get((1)).returnWinner()==this.bigBoard.get((4)).returnWinner()&&this.bigBoard.get(7).returnWinner()==this.bigBoard.get((4)).returnWinner()){
+		if (this.bigBoard.get(1).returnWinner()!=Move.E &&this.bigBoard.get((1)).returnWinner()==this.bigBoard.get((4)).returnWinner()&&this.bigBoard.get(7).returnWinner()==this.bigBoard.get((4)).returnWinner()){
 			return true;
 		}
-		if (this.bigBoard.get((2)).returnWinner()==this.bigBoard.get((5)).returnWinner()&&this.bigBoard.get(8).returnWinner()==this.bigBoard.get((5)).returnWinner()){
+		if (this.bigBoard.get(2).returnWinner()!=Move.E &&this.bigBoard.get((2)).returnWinner()==this.bigBoard.get((5)).returnWinner()&&this.bigBoard.get(8).returnWinner()==this.bigBoard.get((5)).returnWinner()){
 			return true;
 		}
-		if (this.bigBoard.get((0)).returnWinner()==this.bigBoard.get((4)).returnWinner()&&this.bigBoard.get(8).returnWinner()==this.bigBoard.get((4)).returnWinner()){
+		if (this.bigBoard.get(0).returnWinner()!=Move.E &&this.bigBoard.get((0)).returnWinner()==this.bigBoard.get((4)).returnWinner()&&this.bigBoard.get(8).returnWinner()==this.bigBoard.get((4)).returnWinner()){
 			return true;
 		}
-		if (this.bigBoard.get((2)).returnWinner()==this.bigBoard.get((4)).returnWinner()&&this.bigBoard.get(6).returnWinner()==this.bigBoard.get((4)).returnWinner()){
+		if (this.bigBoard.get(2).returnWinner()!=Move.E &&this.bigBoard.get((2)).returnWinner()==this.bigBoard.get((4)).returnWinner()&&this.bigBoard.get(6).returnWinner()==this.bigBoard.get((4)).returnWinner()){
 			return true;
 		}
 		

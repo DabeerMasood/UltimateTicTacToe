@@ -16,6 +16,7 @@ public class InnerBoard {
 			this.boardArray.add(Move.E);
 		}
 		this.fullBoard=false;
+		this.winner=Move.E;
 	}
 	
 	public boolean writeMove(Move move, int location){
@@ -38,28 +39,28 @@ public class InnerBoard {
 	}
 	
 	public boolean checkWin(Move move){
-		if (this.boardArray.get((0)).equals(move)&&this.boardArray.get((1)).equals(move)&&this.boardArray.get(2).equals(move)){
+		if (this.boardArray.get(0)!=Move.E &&this.boardArray.get((0)).equals(move)&&this.boardArray.get((1)).equals(move)&&this.boardArray.get(2).equals(move)){
 			return true;
 		}
-		if (this.boardArray.get((3)).equals(move)&&this.boardArray.get((4)).equals(move)&&this.boardArray.get(5).equals(move)){
+		if (this.boardArray.get(3)!=Move.E && this.boardArray.get((3)).equals(move)&&this.boardArray.get((4)).equals(move)&&this.boardArray.get(5).equals(move)){
 			return true;
 		}
-		if (this.boardArray.get((6)).equals(move)&&this.boardArray.get((7)).equals(move)&&this.boardArray.get(8).equals(move)){
+		if (this.boardArray.get(6)!=Move.E && this.boardArray.get((6)).equals(move)&&this.boardArray.get((7)).equals(move)&&this.boardArray.get(8).equals(move)){
 			return true;
 		}
-		if (this.boardArray.get((0)).equals(move)&&this.boardArray.get((3)).equals(move)&&this.boardArray.get(6).equals(move)){
+		if (this.boardArray.get(0)!=Move.E && this.boardArray.get((0)).equals(move)&&this.boardArray.get((3)).equals(move)&&this.boardArray.get(6).equals(move)){
 			return true;
 		}
-		if (this.boardArray.get((1)).equals(move)&&this.boardArray.get((4)).equals(move)&&this.boardArray.get(7).equals(move)){
+		if (this.boardArray.get(1)!=Move.E && this.boardArray.get((1)).equals(move)&&this.boardArray.get((4)).equals(move)&&this.boardArray.get(7).equals(move)){
 			return true;
 		}
-		if (this.boardArray.get((2)).equals(move)&&this.boardArray.get((5)).equals(move)&&this.boardArray.get(8).equals(move)){
+		if (this.boardArray.get(2)!=Move.E && this.boardArray.get((2)).equals(move)&&this.boardArray.get((5)).equals(move)&&this.boardArray.get(8).equals(move)){
 			return true;
 		}
-		if (this.boardArray.get((0)).equals(move)&&this.boardArray.get((4)).equals(move)&&this.boardArray.get(8).equals(move)){
+		if (this.boardArray.get(0)!=Move.E && this.boardArray.get((0)).equals(move)&&this.boardArray.get((4)).equals(move)&&this.boardArray.get(8).equals(move)){
 			return true;
 		}
-		if (this.boardArray.get((2)).equals(move)&&this.boardArray.get((4)).equals(move)&&this.boardArray.get(6).equals(move)){
+		if (this.boardArray.get(2)!=Move.E && this.boardArray.get((2)).equals(move)&&this.boardArray.get((4)).equals(move)&&this.boardArray.get(6).equals(move)){
 			return true;
 		}
 		

@@ -76,33 +76,31 @@ public class Main {
 				System.out.println("That choice is out of bounds, please pick again");
 				System.out.println("Little Board Number: ");
 				littleBoardChoice = scan.nextInt();
-				}
+			}
 				
 			bigBoard.writeGuess(current,bigBoardChoice,littleBoardChoice);
 
 			/*if(bigBoard.returnBoardStatus()){
 			bigBoardChoice=-1;
 			}*/
-			
-			if(bigBoard.checkWin()){
-				System.out.println("YOU HAVE WON THE GAME!!");
-				break;
-			}
-			
+		}
+		bigBoard.printBoard();
+		System.out.println("YOU HAVE WON THE GAME!!");
 		
 			
-			}
-		}
+		
+	}
+
 			
 			
 		public static  boolean outOfBounds(int choice){
-		if(choice<0 || choice>8){
-			return true;
-		}
-		return false;
+			if(choice<0 || choice>8){
+				return true;
+			}	
+			return false;
 		}
 		
-		}
+}
 		
 		
 	
