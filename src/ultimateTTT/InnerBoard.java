@@ -20,14 +20,15 @@ public class InnerBoard {
 	
 	public boolean writeMove(Move move, int location){
 		if (location<0 || location>8){return false;}
-		if (this.boardArray.get(location) != null){return false;}
+		if (this.boardArray.get(location) != Move.E){return false;}
 		else{
 			boardArray.set(location, move);
 			if (checkWin(move)==true){
-				
+				wonBoard=true;
+				this.winner=move;
 			}
-			if (!this.boardArray.contains(null)){//checks to see if little board is full
-				this.winner = move;
+			if (!this.boardArray.contains(Move.E)){//checks to see if little board is full
+				this.fullBoard=true;
 			}
 			return true;
 		}
@@ -73,7 +74,7 @@ public class InnerBoard {
 	}
 	
 	public void printRow(int row){
-		for (int i=2*row; i<3*row; i++){
+		for (int i=2*row; i<(2*row+3); i++){
 			if (boardArray.get(i)==Move.X){
 				System.out.print('X');
 			} else if(boardArray.get(i)==Move.O){
