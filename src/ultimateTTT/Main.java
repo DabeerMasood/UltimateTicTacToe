@@ -23,15 +23,19 @@ public class Main {
 		current = Move.O;
 		}else if(turn==1){
 		current = Move.X;
-		}
-		if(nextBoard==-1){
 		
+		if(nextBoard==-1){
+		System.out.println("You may play anywhere else");
+		System.out.println("Pick a new BigBoard spot");
+		
+		bigBoardChoice = scan.nextInt();
 		}
 		
 		System.out.println("Player you are playing at " + nextBoard);
 		System.out.println("Player input the little board number you want to play at");
 		System.out.println("Little Board Number:");
 		littleBoardChoice=scan.nextInt();
+		bigBoard.writeGuess(current,bigBoardChoice,littleBoardChoice);
 		
 		
 			
@@ -39,7 +43,7 @@ public class Main {
 			
 			
 			
-			
+		}
 		}
 		
 	}
